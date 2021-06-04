@@ -1,0 +1,156 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+body {
+  font-size: 20px;
+  text-align: center;
+  font-family: "Vibur", sans-serif;
+
+  background-color: #010a01;
+  z-index: 0;
+}
+body::before {
+  content: "";
+  background: url("./martin-sX4lxBWV0-A-unsplash.jpg") no-repeat center/cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.2;
+}
+h1 {
+  font-family: Lato;
+  margin: 1rem;
+  padding: 2rem;
+}
+.container {
+  margin: 2rem auto;
+  width: 100vw;
+  display: flex;
+}
+.mt-4 {
+  margin: 7rem 0rem;
+}
+.neon {
+  margin: 1rem;
+  padding: 0.5rem 3rem;
+  color: #fff;
+  border-radius: 2rem;
+  -webkit-box-reflect: below 0px
+    linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(34, 255, 90, 0.8));
+}
+
+.neonText {
+  text-align: center;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+    0 0 80px #0fa, 0 0 90px #0fa;
+  color: #fff;
+  animation: flicker 3s infinite alternate;
+}
+
+@keyframes flicker {
+  0%,
+  65%,
+  70%,
+  75% {
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa;
+  }
+  55%,
+  67%,
+  73% {
+    color: transparent;
+    text-shadow: none;
+  }
+}
+
+.neonText-2 {
+  text-align: center;
+  animation: pulsate 1s infinite alternate ease-in-out;
+}
+@keyframes pulsate {
+  100% {
+    /* Larger blur radius */
+    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa,
+      0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+  }
+  0% {
+    /* Smaller blur radius */
+    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0fa,
+      0 0 45px #0fa, 0 0 55px #0fa, 0 0 70px #0fa, 0 0 80px #0fa;
+  }
+}
+.third h1 {
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+}
+
+.fourth {
+  height: fit-content;
+  box-shadow: 0 0 0.5rem #fff, 0 0 0.2rem #fff, 0 0 2rem #e91341,
+    inset 0 0 1rem 0px #e91341, inset 0 0 100px 11px #e91341,
+    inset 0 0 80px 3px #e91341;
+}
+.fourth > h2 {
+  font-family: Lato;
+  margin: 2rem;
+  color: #fff;
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #e91341,
+    0 0 80px #e91341, 0 0 90px #e91341, 0 0 150px #e91341;
+}
+
+.buttons {
+  margin: 3rem auto;
+}
+.btn {
+  font-size: 30px;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.btn:focus {
+  outline: none;
+}
+
+.btn-1 {
+  background-color: transparent;
+  box-shadow: 0 0 2rem 1px #fff, 0 0 1rem #fff, 0 0 2rem #00eeff,
+    0 0 0.8rem #00eeff, 0 0 2.8rem #00eeff, inset 0px 0px 20px 20px #010a01;
+  text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #00eeff,
+    0 0 45px #00eeff, 0 0 55px #00eeff, 0 0 70px #00eeff, 0 0 80px #00eeff;
+  transition: all 0.5s ease-in-out;
+}
+.btn-1:hover {
+  box-shadow: 0 0 0rem 1px #fff, 0 0 10rem 16px #fff, 0 0 2rem #00eeff,
+    0 0 0rem 0px #00eeff, 0 0 2.8rem #00eeff, inset 0px 0px 20px 20px #00eeff;
+}
+.btn-2 {
+  position: relative;
+  background-color: transparent;
+  box-shadow: 0 0 2rem 1px #fff, 0 0 1rem #fff, 0 0 2rem #00eeff,
+    0 0 0.8rem #00eeff, 0 0 2.8rem #00eeff, inset 0px 0px 20px 150px #00eeff;
+  text-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 2px #fff;
+  transition: all 0.5s ease;
+}
+.btn-2::after {
+  opacity: 0;
+  margin-top: 20px;
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 10%;
+  width: 80%;
+  border-bottom: 2px solid #fff;
+  transition: opacity 1s ease;
+}
+.btn-2:hover {
+  transform: translateY(-12px);
+}
+.btn-2:hover::after {
+  opacity: 1;
+}
